@@ -1,0 +1,64 @@
+using System;
+using System.Linq;
+
+namespace Actividad_1_de_desarrollo_UF1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            //esto hay que borrarlo antes de entregarlo
+            //Console.WriteLine("hola, bienvenido a mi programa");
+            //Console.WriteLine("introduzca una frase,gracias");
+
+            String texto = Console.ReadLine();
+            String minusculas = texto.ToLower();
+            String sinespacios = texto.Replace(" ", "");                     
+            int consonantescontadora= 0;
+            string consonantes= "bcdfghjklmnpqrstvwxyz";
+            int num = 0;
+            //Imprimir por consola la frase en minúsculas y sin espacios
+            Console.WriteLine(minusculas);
+            Console.WriteLine(sinespacios.ToLower());
+            
+
+            //Imprimir por consola el número total de consonantes de la frase
+
+            
+            foreach (char letra in texto.ToLower())
+            {
+                if (consonantes.Contains(letra))
+                {
+                    consonantescontadora++;
+                }
+
+            }
+            Console.WriteLine("El numero total de consonantes es: {0}", consonantescontadora);
+
+            // Imprimir por consola la suma de todas las cifras numéricas que tiene la frase
+            //(cada cifra por separado)
+            foreach (char letra in texto)
+            {
+                if (char.IsDigit(letra))
+                {
+                    num= int.Parse(letra.ToString());
+                }
+            }
+            Console.WriteLine("La suma numerica es:{0} ",num);
+            
+            //imprime por consla solo las consonantes en mayusculas
+            foreach (char letra in texto)
+            {
+                if (consonantes.Contains(letra))
+                    
+            }
+            Console.Write("Consonantes:{0} ",letra.ToString().ToUpper());
+
+            Console.ReadKey();
+
+        }
+    }
+
+}
